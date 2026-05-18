@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Aprende inglés básico: Pronombres Personales y Verbo To Be en presente. Página educativa para primer semestre de bachillerato.">
+<meta name="author" content="English Basics">
+<meta property="og:title" content="English Basics – Pronombres y Verbo To Be">
+<meta property="og:description" content="Aprende inglés con ejemplos, videos y ejercicios interactivos.">
+<meta property="og:type" content="website">
+<title>English Basics – Pronombres Personales y Verbo To Be</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1B2A4A;
+    --blue: #3D6FF8;
+    --yellow: #FFD23F;
+    --coral: #FF6B6B;
+    --mint: #2EC4B6;
+    --purple: #9B5DE5;
+    --light: #F0F4FF;
+    --white: #FFFFFF;
+    --gray: #6B7A99;
+    --radius: 18px;
+    --shadow: 0 6px 24px rgba(27,42,74,0.12);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Nunito', sans-serif; background: var(--light); color: var(--navy); overflow-x: hidden; }
+
+  /* NAV */
+  nav { background: var(--navy); position: sticky; top: 0; z-index: 100; padding: 0 1rem; box-shadow: 0 3px 12px rgba(0,0,0,0.25); }
+  .nav-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; gap: 4px; flex-wrap: wrap; padding: 8px 0; }
+  nav .brand { font-family: 'Fredoka One', cursive; color: var(--yellow); font-size: 1.2rem; margin-right: 12px; white-space: nowrap; }
+  nav a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.82rem; font-weight: 700; padding: 6px 12px; border-radius: 30px; transition: background 0.2s, color 0.2s; white-space: nowrap; }
+  nav a:hover, nav a.active { background: var(--yellow); color: var(--navy); }
+
+  /* HERO */
+  .hero { background: linear-gradient(135deg, var(--navy) 0%, #2D3D6A 50%, #1a3a6e 100%); color: white; padding: 64px 1rem 72px; text-align: center; position: relative; overflow: hidden; }
+  .hero::before { content:''; position:absolute; inset:0; background: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Ccircle cx='40' cy='40' r='30'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+  .hero-badge { display: inline-block; background: var(--yellow); color: var(--navy); font-size: 0.78rem; font-weight: 800; padding: 5px 16px; border-radius: 30px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; }
+  .hero h1 { font-family: 'Fredoka One', cursive; font-size: clamp(2.2rem, 6vw, 3.8rem); line-height: 1.1; margin-bottom: 16px; }
+  .hero h1 span { color: var(--yellow); }
+  .hero p { font-size: 1.1rem; color: rgba(255,255,255,0.8); max-width: 560px; margin: 0 auto 28px; }
+  .hero-pills { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+  .pill { background: rgba(255,255,255,0.12); border: 2px solid rgba(255,255,255,0.25); color: white; padding: 7px 18px; border-radius: 30px; font-size: 0.85rem; font-weight: 700; }
+  .pill.y { background: var(--yellow); color: var(--navy); border-color: var(--yellow); }
+
+  /* MAIN WRAP */
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 1rem; }
+
+  /* SECTION HEADERS */
+  .section { padding: 60px 1rem; }
+  .section-header { text-align: center; margin-bottom: 40px; }
+  .section-tag { display: inline-block; font-size: 0.75rem; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 14px; border-radius: 30px; margin-bottom: 10px; }
+  .tag-blue { background: #DDE8FF; color: var(--blue); }
+  .tag-coral { background: #FFE8E8; color: var(--coral); }
+  .tag-mint { background: #D6F5F3; color: var(--mint); }
+  .tag-purple { background: #EFE0FF; color: var(--purple); }
+  .tag-yellow { background: #FFF3C4; color: #9B6F00; }
+  .section-header h2 { font-family: 'Fredoka One', cursive; font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: 8px; }
+  .section-header p { color: var(--gray); max-width: 540px; margin: 0 auto; font-size: 1rem; }
+
+  /* CARDS */
+  .card { background: var(--white); border-radius: var(--radius); box-shadow: var(--shadow); padding: 28px; }
+  .card-grid { display: grid; gap: 20px; }
+  .card-grid-2 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+  .card-grid-3 { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+  .card-grid-4 { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+
+  /* ---- SECTION 1: PRONOUNS ---- */
+  .section-pronouns { background: var(--white); }
+  .pronouns-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: start; margin-bottom: 36px; }
+  @media(max-width:640px){ .pronouns-intro { grid-template-columns: 1fr; } }
+  .pronouns-table-wrap { overflow-x: auto; }
+  .pronouns-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  .pronouns-table th { background: var(--navy); color: white; padding: 12px 16px; text-align: left; font-weight: 700; font-size: 0.85rem; letter-spacing: .5px; }
+  .pronouns-table td { padding: 11px 16px; border-bottom: 1px solid #EEF0F8; }
+  .pronouns-table tr:nth-child(even) td { background: #F8F9FF; }
+  .pro-badge { display: inline-block; font-family: 'Fredoka One', cursive; font-size: 1.05rem; padding: 3px 14px; border-radius: 20px; color: white; }
+  .bg-blue { background: var(--blue); }
+  .bg-coral { background: var(--coral); }
+  .bg-mint { background: var(--mint); }
+  .bg-purple { background: var(--purple); }
+  .bg-yellow { background: #F5A623; }
+
+  .pronoun-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 14px; margin-top: 12px; }
+  .pronoun-card { border-radius: 14px; padding: 20px 12px; text-align: center; transition: transform 0.2s; cursor: default; }
+  .pronoun-card:hover { transform: translateY(-4px); }
+  .pronoun-card .en { font-family: 'Fredoka One', cursive; font-size: 1.7rem; display: block; }
+  .pronoun-card .es { font-size: 0.8rem; font-weight: 700; opacity: 0.75; margin-top: 2px; display: block; }
+  .pronoun-card .use { font-size: 0.72rem; margin-top: 6px; background: rgba(255,255,255,0.35); padding: 3px 8px; border-radius: 10px; display: inline-block; }
+
+  /* ---- SECTION 2: VERB TO BE ---- */
+  .section-tobe { background: var(--light); }
+  .tobe-hero { background: linear-gradient(135deg, #9B5DE5, #6A3ABA); border-radius: var(--radius); padding: 36px 32px; color: white; margin-bottom: 32px; display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
+  .tobe-hero h3 { font-family: 'Fredoka One', cursive; font-size: 1.8rem; margin-bottom: 8px; }
+  .tobe-hero p { opacity: 0.85; max-width: 420px; }
+  .formula-box { background: rgba(255,255,255,0.15); border: 2px solid rgba(255,255,255,0.3); border-radius: 12px; padding: 16px 24px; text-align: center; flex-shrink: 0; }
+  .formula-box .f { font-family: 'Fredoka One', cursive; font-size: 1.3rem; letter-spacing: 1px; }
+  .formula-box .fl { font-size: 0.75rem; opacity: 0.7; margin-top: 4px; }
+
+  .tobe-table-wrap { overflow-x: auto; }
+  .tobe-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  .tobe-table th { padding: 12px 16px; text-align: left; font-weight: 700; font-size: 0.82rem; letter-spacing: .5px; text-transform: uppercase; }
+  .tobe-table td { padding: 13px 16px; border-bottom: 1px solid #EEF0F8; }
+  .tobe-table tr:last-child td { border-bottom: none; }
+  .tobe-table .pronoun { font-family: 'Fredoka One', cursive; font-size: 1.05rem; }
+  .tobe-badge { display: inline-block; font-family: 'Fredoka One', cursive; font-size: 1.1rem; padding: 4px 18px; border-radius: 20px; }
+  .neg-rule { background: #FFF3C4; border-left: 4px solid #F5A623; border-radius: 0 12px 12px 0; padding: 16px 20px; margin-top: 20px; }
+  .neg-rule strong { color: #7A5200; display: block; margin-bottom: 4px; }
+  .neg-rule span { font-size: 0.9rem; color: #555; }
+
+  .uses-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 28px; }
+  .use-card { border-radius: 14px; padding: 20px; }
+  .use-card .icon { font-size: 2rem; margin-bottom: 8px; }
+  .use-card h4 { font-size: 0.95rem; font-weight: 800; margin-bottom: 6px; }
+  .use-card p { font-size: 0.85rem; opacity: 0.8; margin-bottom: 8px; }
+  .use-card .example { font-style: italic; font-size: 0.85rem; background: rgba(0,0,0,0.08); padding: 5px 10px; border-radius: 8px; }
+
+  /* ---- SECTION 3: RESOURCES ---- */
+  .section-resources { background: var(--white); }
+  .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 24px; }
+  .video-card { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+  .video-card iframe { width: 100%; height: 200px; display: block; border: none; }
+  .video-info { padding: 16px 20px; }
+  .video-info .vtag { font-size: 0.72rem; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; }
+  .video-info h4 { font-weight: 800; margin: 6px 0 4px; font-size: 1rem; }
+  .video-info p { font-size: 0.85rem; color: var(--gray); }
+
+  .links-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-top: 32px; }
+  .link-card { border-radius: 14px; padding: 20px; text-decoration: none; color: inherit; display: flex; gap: 14px; align-items: flex-start; transition: transform 0.2s, box-shadow 0.2s; }
+  .link-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.12); }
+  .link-icon { width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; flex-shrink: 0; }
+  .link-card h4 { font-size: 0.95rem; font-weight: 800; margin-bottom: 3px; }
+  .link-card p { font-size: 0.8rem; opacity: 0.7; }
+
+  /* ---- SECTION 4: EXAMPLES ---- */
+  .section-examples { background: var(--light); }
+  .example-tabs { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin-bottom: 28px; }
+  .etab { border: 2px solid var(--navy); border-radius: 30px; padding: 8px 22px; font-size: 0.88rem; font-weight: 700; cursor: pointer; background: transparent; color: var(--navy); transition: all 0.2s; font-family: 'Nunito', sans-serif; }
+  .etab.active, .etab:hover { background: var(--navy); color: white; }
+  .example-panel { display: none; }
+  .example-panel.active { display: block; }
+  .example-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
+  .ex-card { background: var(--white); border-radius: 16px; padding: 22px; box-shadow: var(--shadow); border-top: 5px solid var(--blue); }
+  .ex-card.coral { border-top-color: var(--coral); }
+  .ex-card.mint { border-top-color: var(--mint); }
+  .ex-card.purple { border-top-color: var(--purple); }
+  .ex-card .en { font-family: 'Fredoka One', cursive; font-size: 1.25rem; color: var(--navy); margin-bottom: 6px; }
+  .ex-card .es { font-size: 0.85rem; color: var(--gray); margin-bottom: 10px; }
+  .ex-card .breakdown { display: flex; gap: 6px; flex-wrap: wrap; }
+  .word-chip { padding: 3px 10px; border-radius: 20px; font-size: 0.78rem; font-weight: 700; }
+
+  .dialogue-box { background: var(--white); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; }
+  .dialogue-header { background: var(--navy); color: white; padding: 14px 22px; font-weight: 700; font-size: 0.9rem; }
+  .dialogue-body { padding: 20px; display: flex; flex-direction: column; gap: 14px; }
+  .bubble { max-width: 80%; padding: 12px 18px; border-radius: 18px; font-size: 0.95rem; line-height: 1.5; }
+  .bubble.a { background: #E8EDFF; border-radius: 18px 18px 18px 4px; align-self: flex-start; }
+  .bubble.b { background: var(--blue); color: white; border-radius: 18px 18px 4px 18px; align-self: flex-end; }
+  .bubble .speaker { font-size: 0.72rem; font-weight: 800; display: block; margin-bottom: 4px; opacity: 0.7; }
+  .bubble .es { font-size: 0.78rem; opacity: 0.65; font-style: italic; margin-top: 4px; display: block; }
+
+  /* ---- SECTION 5: PRACTICE ---- */
+  .section-practice { background: var(--white); }
+  .practice-tabs { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-bottom: 32px; }
+  .ptab { padding: 10px 24px; border-radius: 30px; font-size: 0.88rem; font-weight: 700; cursor: pointer; border: 2.5px solid var(--blue); background: transparent; color: var(--blue); transition: all 0.2s; font-family: 'Nunito', sans-serif; }
+  .ptab.active, .ptab:hover { background: var(--blue); color: white; }
+  .practice-panel { display: none; }
+  .practice-panel.active { display: block; }
+
+  /* Exercise 1: Fill blank */
+  .exercise-intro { text-align: center; margin-bottom: 28px; }
+  .exercise-intro h3 { font-family: 'Fredoka One', cursive; font-size: 1.5rem; margin-bottom: 6px; }
+  .exercise-intro p { color: var(--gray); }
+  .fillblank-list { display: flex; flex-direction: column; gap: 16px; max-width: 700px; margin: 0 auto; }
+  .fb-item { background: var(--light); border-radius: 14px; padding: 18px 22px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; font-size: 1rem; font-weight: 600; }
+  .fb-num { width: 30px; height: 30px; background: var(--blue); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.85rem; font-weight: 800; flex-shrink: 0; }
+  .fb-input { border: 2.5px solid #C0CCEE; border-radius: 10px; padding: 6px 14px; font-size: 1rem; font-family: 'Nunito', sans-serif; font-weight: 700; color: var(--navy); width: 80px; text-align: center; outline: none; transition: border-color 0.2s; }
+  .fb-input:focus { border-color: var(--blue); }
+  .fb-input.correct { border-color: var(--mint); background: #D6F5F3; }
+  .fb-input.wrong { border-color: var(--coral); background: #FFE8E8; }
+  .fb-hint { font-size: 0.78rem; color: var(--gray); margin-left: auto; display: none; }
+
+  /* Exercise 2: Multiple choice */
+  .mc-list { display: flex; flex-direction: column; gap: 22px; max-width: 700px; margin: 0 auto; }
+  .mc-item { background: var(--light); border-radius: 14px; padding: 20px 22px; }
+  .mc-q { font-weight: 700; font-size: 1rem; margin-bottom: 14px; }
+  .mc-options { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .mc-opt { padding: 10px 14px; border: 2.5px solid #C0CCEE; border-radius: 12px; cursor: pointer; font-family: 'Nunito', sans-serif; font-size: 0.92rem; font-weight: 700; background: white; color: var(--navy); transition: all 0.2s; text-align: left; }
+  .mc-opt:hover { border-color: var(--blue); background: #EEF2FF; }
+  .mc-opt.correct { border-color: var(--mint); background: #D6F5F3; color: #0D7A70; }
+  .mc-opt.wrong { border-color: var(--coral); background: #FFE8E8; color: #8B1A1A; }
+  .mc-opt:disabled { cursor: default; }
+  .mc-feedback { margin-top: 10px; font-size: 0.85rem; font-weight: 700; display: none; padding: 6px 12px; border-radius: 8px; }
+
+  /* Exercise 3: Matching */
+  .match-wrap { max-width: 700px; margin: 0 auto; }
+  .match-row { display: grid; grid-template-columns: 1fr auto 1fr; gap: 12px; align-items: center; margin-bottom: 12px; }
+  .match-left { background: var(--light); border-radius: 12px; padding: 12px 18px; font-weight: 700; text-align: center; }
+  .match-arrow { color: var(--gray); font-size: 1.2rem; }
+  .match-select { border: 2.5px solid #C0CCEE; border-radius: 12px; padding: 10px 12px; font-family: 'Nunito', sans-serif; font-size: 0.92rem; font-weight: 700; color: var(--navy); background: white; outline: none; width: 100%; cursor: pointer; transition: border-color 0.2s; appearance: none; -webkit-appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236B7A99' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; padding-right: 32px; }
+  .match-select:focus { border-color: var(--blue); }
+  .match-select.correct { border-color: var(--mint); background-color: #D6F5F3; }
+  .match-select.wrong { border-color: var(--coral); background-color: #FFE8E8; }
+
+  /* Check buttons */
+  .check-btn { display: block; margin: 24px auto 0; background: var(--blue); color: white; border: none; border-radius: 30px; padding: 13px 36px; font-family: 'Nunito', sans-serif; font-size: 1rem; font-weight: 800; cursor: pointer; transition: background 0.2s, transform 0.15s; }
+  .check-btn:hover { background: #2B56D6; transform: translateY(-2px); }
+  .score-box { text-align: center; margin-top: 20px; padding: 16px 24px; border-radius: 14px; display: none; }
+  .score-box h4 { font-family: 'Fredoka One', cursive; font-size: 1.6rem; margin-bottom: 4px; }
+  .score-box p { font-size: 0.9rem; }
+
+  /* FOOTER */
+  footer { background: var(--navy); color: rgba(255,255,255,0.7); text-align: center; padding: 28px 1rem; font-size: 0.85rem; }
+  footer strong { color: var(--yellow); }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp { from { opacity:0; transform: translateY(20px); } to { opacity:1; transform: translateY(0); } }
+  .fade-up { animation: fadeUp 0.6s ease both; }
+  .delay-1 { animation-delay: 0.1s; } .delay-2 { animation-delay: 0.2s; } .delay-3 { animation-delay: 0.3s; }
+
+  /* BADGES ON PRONOUNS TABLE */
+  .thumb { font-size: 1.4rem; line-height: 1; }
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <div class="nav-inner">
+    <span class="brand">🇺🇸 English Basics</span>
+    <a href="#pronouns" class="active">Personal Pronouns</a>
+    <a href="#tobe">Verb To Be</a>
+    <a href="#resources">Recursos</a>
+    <a href="#examples">Ejemplos</a>
+    <a href="#practice">Practica</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-badge">First Semester • Nivel Básico</div>
+    <h1 class="fade-up">Learn English<br><span>Step by Step! 🚀</span></h1>
+    <p class="fade-up delay-1">Domina los fundamentos del inglés: pronombres personales y el verbo <em>to be</em> en presente.</p>
+    <div class="hero-pills fade-up delay-2">
+      <span class="pill y">Personal Pronouns</span>
+      <span class="pill">Verb To Be</span>
+      <span class="pill">Affirmative ✔</span>
+      <span class="pill">Negative ✘</span>
+      <span class="pill">Questions ❓</span>
+    </div>
+  </div>
+</header>
+
+<!-- ======================== -->
+<!-- SECTION 1: PRONOUNS     -->
+<!-- ======================== -->
+<section class="section section-pronouns" id="pronouns">
+  <div class="wrap">
+    <div class="section-header">
+      <span class="section-tag tag-blue">Tema 1</span>
+      <h2>Personal Pronouns 👤</h2>
+      <p>Los pronombres personales reemplazan a las personas o cosas para no repetir sus nombres. Son la base de toda oración en inglés.</p>
+    </div>
+
+    <!-- Visual Pronoun Cards -->
+    <div class="pronoun-cards" style="margin-bottom:40px;">
+      <div class="pronoun-card" style="background:#EEF2FF; color:#1B2A4A;">
+        <span class="en" style="color:var(--blue)">I</span>
+        <span class="es">Yo</span>
+        <span class="use">1a persona singular</span>
+      </div>
+      <div class="pronoun-card" style="background:#FFF3C4; color:#1B2A4A;">
+        <span class="en" style="color:#9B6F00">You</span>
+        <span class="es">Tú / Usted</span>
+        <span class="use">2a persona singular</span>
+      </div>
+      <div class="pronoun-card" style="background:#FFE8E8; color:#1B2A4A;">
+        <span class="en" style="color:var(--coral)">He</span>
+        <span class="es">Él</span>
+        <span class="use">Masculino singular</span>
+      </div>
+      <div class="pronoun-card" style="background:#D6F5F3; color:#1B2A4A;">
+        <span class="en" style="color:var(--mint)">She</span>
+        <span class="es">Ella</span>
+        <span class="use">Femenino singular</span>
+      </div>
+      <div class="pronoun-card" style="background:#EFE0FF; color:#1B2A4A;">
+        <span class="en" style="color:var(--purple)">It</span>
+        <span class="es">Eso / Esa</span>
+        <span class="use">Cosas / Animales</span>
+      </div>
+      <div class="pronoun-card" style="background:#EEF2FF; color:#1B2A4A;">
+        <span class="en" style="color:var(--blue)">We</span>
+        <span class="es">Nosotros/as</span>
+        <span class="use">1a persona plural</span>
+      </div>
+      <div class="pronoun-card" style="background:#FFF3C4; color:#1B2A4A;">
+        <span class="en" style="color:#9B6F00">You</span>
+        <span class="es">Ustedes</span>
+        <span class="use">2a persona plural</span>
+      </div>
+      <div class="pronoun-card" style="background:#FFE8E8; color:#1B2A4A;">
+        <span class="en" style="color:var(--coral)">They</span>
+        <span class="es">Ellos / Ellas</span>
+        <span class="use">3a persona plural</span>
+      </div>
+    </div>
+
+    <!-- Table -->
+    <div class="pronouns-intro">
+      <div class="card">
+        <h3 style="font-family:'Fredoka One',cursive; margin-bottom:16px; font-size:1.3rem;">📊 Tabla Completa</h3>
+        <div class="pronouns-table-wrap">
+          <table class="pronouns-table">
+            <thead>
+              <tr>
+                <th>Pronombre</th>
+                <th>Español</th>
+                <th>Uso</th>
+                <th>Ejemplo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><span class="pro-badge bg-blue">I</span></td><td>Yo</td><td>La persona que habla</td><td><em>I am a student.</em></td></tr>
+              <tr><td><span class="pro-badge bg-yellow">You</span></td><td>Tú / Usted</td><td>La persona con quien hablas</td><td><em>You are smart.</em></td></tr>
+              <tr><td><span class="pro-badge bg-coral">He</span></td><td>Él</td><td>Un hombre o niño</td><td><em>He is my brother.</em></td></tr>
+              <tr><td><span class="pro-badge bg-mint">She</span></td><td>Ella</td><td>Una mujer o niña</td><td><em>She is my teacher.</em></td></tr>
+              <tr><td><span class="pro-badge bg-purple">It</span></td><td>Eso / Esa</td><td>Animal, cosa o lugar</td><td><em>It is a cat.</em></td></tr>
+              <tr><td><span class="pro-badge bg-blue">We</span></td><td>Nosotros/as</td><td>Yo + otras personas</td><td><em>We are friends.</em></td></tr>
+              <tr><td><span class="pro-badge bg-yellow">You</span></td><td>Ustedes</td><td>Grupo con quien hablas</td><td><em>You are welcome.</em></td></tr>
+              <tr><td><span class="pro-badge bg-coral">They</span></td><td>Ellos / Ellas</td><td>Grupo de personas o cosas</td><td><em>They are happy.</em></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div>
+        <div class="card" style="margin-bottom:18px; border-left: 5px solid var(--yellow); border-radius: 0 var(--radius) var(--radius) 0;">
+          <div style="font-size:1.5rem; margin-bottom:8px;">💡</div>
+          <h4 style="font-weight:800; margin-bottom:8px;">¿Cuándo uso "It"?</h4>
+          <p style="font-size:0.9rem; color:var(--gray); line-height:1.6;">Usa <strong style="color:var(--purple)">It</strong> para animales (si no sabes el género), cosas y lugares. En español puede ser "él, ella, eso, esa" dependiendo del contexto.</p>
+          <div style="margin-top:10px; background:#F8F6FF; border-radius:10px; padding:10px 14px;">
+            <p style="font-size:0.88rem;"><strong style="color:var(--purple)">It</strong> is a dog. → <em>Es un perro.</em></p>
+            <p style="font-size:0.88rem;"><strong style="color:var(--purple)">It</strong> is cold today. → <em>Hace frío hoy.</em></p>
+          </div>
+        </div>
+        <div class="card" style="border-left: 5px solid var(--coral); border-radius: 0 var(--radius) var(--radius) 0;">
+          <div style="font-size:1.5rem; margin-bottom:8px;">⚠️</div>
+          <h4 style="font-weight:800; margin-bottom:8px;">"You" es singular Y plural</h4>
+          <p style="font-size:0.9rem; color:var(--gray); line-height:1.6;">En inglés, <strong style="color:#9B6F00">you</strong> se usa tanto para hablarle a UNA persona como a un GRUPO. El contexto indica cuál es cuál.</p>
+          <div style="margin-top:10px; background:#FFF8F0; border-radius:10px; padding:10px 14px;">
+            <p style="font-size:0.88rem;"><strong style="color:#9B6F00">You</strong> are my friend. (singular)</p>
+            <p style="font-size:0.88rem;"><strong style="color:#9B6F00">You</strong> are my friends. (plural)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== -->
+<!-- SECTION 2: VERB TO BE   -->
+<!-- ======================== -->
+<section class="section section-tobe" id="tobe">
+  <div class="wrap">
+    <div class="section-header">
+      <span class="section-tag tag-purple">Tema 2</span>
+      <h2>Verb To Be – Present Tense 🔵</h2>
+      <p>El verbo <em>to be</em> significa "ser" o "estar". Es el verbo más importante del inglés y tiene tres formas en presente.</p>
+    </div>
+
+    <!-- Hero Banner -->
+    <div class="tobe-hero">
+      <div>
+        <h3>The Three Forms 🎯</h3>
+        <p>El verbo <em>to be</em> cambia dependiendo del pronombre. Solo hay 3 formas: <strong>am, is, are</strong>. ¡Memorísalas!</p>
+      </div>
+      <div class="formula-box">
+        <div class="f">AM &nbsp;·&nbsp; IS &nbsp;·&nbsp; ARE</div>
+        <div class="fl">Las 3 formas del presente</div>
+      </div>
+    </div>
+
+    <div class="card-grid card-grid-2" style="margin-bottom:28px;">
+      <!-- Affirmative -->
+      <div class="card">
+        <h3 style="font-family:'Fredoka One',cursive; font-size:1.25rem; margin-bottom:6px; color:var(--mint);">✅ Affirmative</h3>
+        <p style="font-size:0.82rem; color:var(--gray); margin-bottom:16px; font-weight:700; text-transform:uppercase; letter-spacing:.5px;">Pronombre + Verbo To Be + …</p>
+        <div class="tobe-table-wrap">
+          <table class="tobe-table">
+            <thead style="background:#D6F5F3;">
+              <tr>
+                <th style="color:#0D7A70;">Pronombre</th>
+                <th style="color:#0D7A70;">To Be</th>
+                <th style="color:#0D7A70;">Contracción</th>
+                <th style="color:#0D7A70;">Ejemplo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="pronoun">I</td><td><span class="tobe-badge" style="background:#D6F5F3; color:#0D7A70;">am</span></td><td style="color:var(--gray); font-style:italic;">I'm</td><td>I am happy.</td></tr>
+              <tr><td class="pronoun">You</td><td><span class="tobe-badge" style="background:#DDE8FF; color:#1A3FA0;">are</span></td><td style="color:var(--gray); font-style:italic;">You're</td><td>You are funny.</td></tr>
+              <tr><td class="pronoun">He / She / It</td><td><span class="tobe-badge" style="background:#FFE8E8; color:#8B1A1A;">is</span></td><td style="color:var(--gray); font-style:italic;">He's / She's / It's</td><td>She is nice.</td></tr>
+              <tr><td class="pronoun">We</td><td><span class="tobe-badge" style="background:#DDE8FF; color:#1A3FA0;">are</span></td><td style="color:var(--gray); font-style:italic;">We're</td><td>We are a team.</td></tr>
+              <tr><td class="pronoun">You (pl.)</td><td><span class="tobe-badge" style="background:#DDE8FF; color:#1A3FA0;">are</span></td><td style="color:var(--gray); font-style:italic;">You're</td><td>You are late.</td></tr>
+              <tr><td class="pronoun">They</td><td><span class="tobe-badge" style="background:#DDE8FF; color:#1A3FA0;">are</span></td><td style="color:var(--gray); font-style:italic;">They're</td><td>They are tired.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Negative -->
+      <div class="card">
+        <h3 style="font-family:'Fredoka One',cursive; font-size:1.25rem; margin-bottom:6px; color:var(--coral);">❌ Negative</h3>
+        <p style="font-size:0.82rem; color:var(--gray); margin-bottom:16px; font-weight:700; text-transform:uppercase; letter-spacing:.5px;">Pronombre + To Be + not + …</p>
+        <div class="tobe-table-wrap">
+          <table class="tobe-table">
+            <thead style="background:#FFE8E8;">
+              <tr>
+                <th style="color:#8B1A1A;">Pronombre</th>
+                <th style="color:#8B1A1A;">Forma negativa</th>
+                <th style="color:#8B1A1A;">Contracción</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="pronoun">I</td><td>am not</td><td style="color:var(--gray); font-style:italic;">I'm not</td></tr>
+              <tr><td class="pronoun">You</td><td>are not</td><td style="color:var(--gray); font-style:italic;">You aren't / You're not</td></tr>
+              <tr><td class="pronoun">He / She / It</td><td>is not</td><td style="color:var(--gray); font-style:italic;">He isn't / He's not</td></tr>
+              <tr><td class="pronoun">We</td><td>are not</td><td style="color:var(--gray); font-style:italic;">We aren't / We're not</td></tr>
+              <tr><td class="pronoun">You (pl.)</td><td>are not</td><td style="color:var(--gray); font-style:italic;">You aren't</td></tr>
+              <tr><td class="pronoun">They</td><td>are not</td><td style="color:var(--gray); font-style:italic;">They aren't / They're not</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="neg-rule">
+          <strong>📌 Regla: I am NOT tiene contracción especial</strong>
+          <span>"I am not" NO puede contraerse como "I amn't". La única forma es <strong>I'm not</strong>.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Questions -->
+    <div class="card" style="margin-bottom:28px;">
+      <h3 style="font-family:'Fredoka One',cursive; font-size:1.25rem; margin-bottom:6px; color:var(--blue);">❓ Questions (Preguntas)</h3>
+      <p style="font-size:0.85rem; color:var(--gray); margin-bottom:18px;"><strong>Fórmula:</strong> To Be + Pronombre + … + ?</p>
+      <div class="card-grid card-grid-3">
+        <div style="background:#EEF2FF; border-radius:14px; padding:18px;">
+          <div style="font-size:0.75rem; font-weight:800; color:var(--blue); letter-spacing:1px; text-transform:uppercase; margin-bottom:6px;">Yes/No Questions</div>
+          <p style="font-family:'Fredoka One',cursive; font-size:1.1rem; color:var(--navy); margin-bottom:8px;">Am I right?</p>
+          <p style="font-family:'Fredoka One',cursive; font-size:1.1rem; color:var(--navy); margin-bottom:8px;">Is she at home?</p>
+          <p style="font-family:'Fredoka One',cursive; font-size:1.1rem; color:var(--navy);">Are they students?</p>
+        </div>
+        <div style="background:#FFF3C4; border-radius:14px; padding:18px;">
+          <div style="font-size:0.75rem; font-weight:800; color:#9B6F00; letter-spacing:1px; text-transform:uppercase; margin-bottom:6px;">Short Answers</div>
+          <p style="font-size:0.9rem; font-weight:700; margin-bottom:6px;">Yes, I am. / No, I'm not.</p>
+          <p style="font-size:0.9rem; font-weight:700; margin-bottom:6px;">Yes, she is. / No, she isn't.</p>
+          <p style="font-size:0.9rem; font-weight:700;">Yes, they are. / No, they aren't.</p>
+        </div>
+        <div style="background:#EFE0FF; border-radius:14px; padding:18px;">
+          <div style="font-size:0.75rem; font-weight:800; color:var(--purple); letter-spacing:1px; text-transform:uppercase; margin-bottom:6px;">Wh- Questions</div>
+          <p style="font-family:'Fredoka One',cursive; font-size:1.05rem; color:var(--navy); margin-bottom:6px;">Where are you from?</p>
+          <p style="font-family:'Fredoka One',cursive; font-size:1.05rem; color:var(--navy); margin-bottom:6px;">What is your name?</p>
+          <p style="font-family:'Fredoka One',cursive; font-size:1.05rem; color:var(--navy);">How old are you?</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Uses of To Be -->
+    <div class="uses-grid">
+      <div class="use-card" style="background:#EEF2FF;">
+        <div class="icon">🌍</div>
+        <h4 style="color:var(--blue);">Nationality / Origin</h4>
+        <p>Para decir de dónde eres</p>
+        <div class="example">She is Mexican.<br>We are from Zacatecas.</div>
+      </div>
+      <div class="use-card" style="background:#FFE8E8;">
+        <div class="icon">💼</div>
+        <h4 style="color:var(--coral);">Profession / Identity</h4>
+        <p>Para decir quién eres o qué haces</p>
+        <div class="example">He is a teacher.<br>I am a student.</div>
+      </div>
+      <div class="use-card" style="background:#D6F5F3;">
+        <div class="icon">😄</div>
+        <h4 style="color:var(--mint);">Feelings / Emotions</h4>
+        <p>Para expresar cómo te sientes</p>
+        <div class="example">They are excited.<br>I am nervous.</div>
+      </div>
+      <div class="use-card" style="background:#EFE0FF;">
+        <div class="icon">📍</div>
+        <h4 style="color:var(--purple);">Location / Place</h4>
+        <p>Para decir dónde está algo</p>
+        <div class="example">The school is near.<br>We are at home.</div>
+      </div>
+      <div class="use-card" style="background:#FFF3C4;">
+        <div class="icon">📏</div>
+        <h4 style="color:#9B6F00;">Description</h4>
+        <p>Para describir personas o cosas</p>
+        <div class="example">The book is interesting.<br>You are very tall.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== -->
+<!-- SECTION 3: RESOURCES    -->
+<!-- ======================== -->
+<section class="section section-resources" id="resources">
+  <div class="wrap">
+    <div class="section-header">
+      <span class="section-tag tag-coral">Recursos</span>
+      <h2>Resources 🎬</h2>
+      <p>Videos y sitios web seleccionados para reforzar lo aprendido. ¡Aprende con los mejores canales de inglés!</p>
+    </div>
+
+    <!-- Videos -->
+    <h3 style="font-family:'Fredoka One',cursive; font-size:1.3rem; margin-bottom:18px; display:flex; align-items:center; gap:8px;"><span style="background:#FF6B6B; color:white; padding:2px 12px; border-radius:6px; font-size:0.9rem;">▶ YouTube</span> Videos Recomendados</h3>
+    <div class="video-grid">
+      <div class="video-card">
+        <!-- Personal Pronouns - English Grammar Lesson -->
+        <iframe src="https://www.youtube.com/embed/gJrMkcWmt5g" title="Personal Pronouns in English" allowfullscreen loading="lazy"></iframe>
+        <div class="video-info">
+          <span class="vtag" style="color:var(--blue);">👤 PERSONAL PRONOUNS</span>
+          <h4>Personal Pronouns – Grammar Lesson</h4>
+          <p>Lección completa de pronombres personales con ejemplos claros. Incluye ejercicios al final del video.</p>
+        </div>
+      </div>
+      <div class="video-card">
+        <!-- Verb To Be A1 - Basic English Grammar -->
+        <iframe src="https://www.youtube.com/embed/mDdBvF0j-Zk&t=76s" title="Verb To Be - English Grammar A1" allowfullscreen loading="lazy"></iframe>
+        <div class="video-info">
+          <span class="vtag" style="color:var(--purple);">🔵 VERB TO BE</span>
+          <h4>Verb To Be – Present Tense (A1)</h4>
+          <p>Lección de nivel A1 sobre am, is, are. Explicación de forma afirmativa, negativa y preguntas con ejemplos.</p>
+        </div>
+      </div>
+      <div class="video-card">
+        <!-- To Be Grammar & Exercises - engVid -->
+        <iframe src="https://www.youtube.com/embed/2g4bWLedJLM" title="Verb To Be - Grammar and Exercises" allowfullscreen loading="lazy"></iframe>
+        <div class="video-info">
+          <span class="vtag" style="color:var(--mint);">✏️ PRÁCTICA</span>
+          <h4>To Be – Affirmative, Negative & Questions</h4>
+          <p>Práctica completa del verbo to be en sus tres formas. Canal engVid, uno de los más confiables para aprender inglés.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Web Resources -->
+    <h3 style="font-family:'Fredoka One',cursive; font-size:1.3rem; margin: 40px 0 18px; display:flex; align-items:center; gap:8px;">🌐 Sitios Web Interactivos</h3>
+    <div class="links-grid">
+      <a href="https://www.duolingo.com" target="_blank" rel="noopener" class="link-card" style="background:#EEF2FF;">
+        <div class="link-icon" style="background:#DDE8FF;">🦉</div>
+        <div>
+          <h4>Duolingo</h4>
+          <p>Aprende inglés con juegos y lecciones breves. Gratuito y muy dinámico.</p>
+        </div>
+      </a>
+      <a href="https://www.britishcouncil.org/english/learn-online" target="_blank" rel="noopener" class="link-card" style="background:#D6F5F3;">
+        <div class="link-icon" style="background:#B3EDE7;">🏴󠁧󠁢󠁥󠁮󠁧󠁿</div>
+        <div>
+          <h4>British Council</h4>
+          <p>Materiales oficiales del British Council. Ejercicios de nivel A1-A2 perfectos para ti.</p>
+        </div>
+      </a>
+      <a href="https://www.eslgamesworld.com" target="_blank" rel="noopener" class="link-card" style="background:#FFF3C4;">
+        <div class="link-icon" style="background:#FFE680;">🎮</div>
+        <div>
+          <h4>ESL Games World</h4>
+          <p>Aprende inglés jugando. Juegos interactivos sobre gramática y vocabulario básico.</p>
+        </div>
+      </a>
+      <a href="https://www.perfect-english-grammar.com/verb-to-be.html" target="_blank" rel="noopener" class="link-card" style="background:#EFE0FF;">
+        <div class="link-icon" style="background:#DEC0FF;">📘</div>
+        <div>
+          <h4>Perfect English Grammar</h4>
+          <p>Explicaciones y ejercicios descargables sobre el verbo to be. Muy completo.</p>
+        </div>
+      </a>
+      <a href="https://www.englishclub.com/grammar/verb-to-be.php" target="_blank" rel="noopener" class="link-card" style="background:#FFE8E8;">
+        <div class="link-icon" style="background:#FFC4C4;">📚</div>
+        <div>
+          <h4>English Club</h4>
+          <p>Guías de gramática con ejemplos, quizzes y explicaciones paso a paso.</p>
+        </div>
+      </a>
+      <a href="https://quizlet.com" target="_blank" rel="noopener" class="link-card" style="background:#D6F5F3;">
+        <div class="link-icon" style="background:#A6E8E3;">🃏</div>
+        <div>
+          <h4>Quizlet</h4>
+          <p>Crea o usa flashcards sobre pronombres y verbo to be. Ideal para memorizar.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== -->
+<!-- SECTION 4: EXAMPLES     -->
+<!-- ======================== -->
+<section class="section section-examples" id="examples">
+  <div class="wrap">
+    <div class="section-header">
+      <span class="section-tag tag-mint">Ejemplos</span>
+      <h2>Practical Examples 💬</h2>
+      <p>Oraciones reales que puedes usar en tu vida diaria. El inglés en contexto es mucho más fácil de recordar.</p>
+    </div>
+
+    <div class="example-tabs">
+      <button class="etab active" onclick="showETab(this,'etab-aff')">✅ Affirmative</button>
+      <button class="etab" onclick="showETab(this,'etab-neg')">❌ Negative</button>
+      <button class="etab" onclick="showETab(this,'etab-q')">❓ Questions</button>
+      <button class="etab" onclick="showETab(this,'etab-dia')">💬 Dialogue</button>
+    </div>
+
+    <!-- Affirmative -->
+    <div class="example-panel active" id="etab-aff">
+      <div class="example-cards">
+        <div class="ex-card">
+          <div class="en">I am 15 years old.</div>
+          <div class="es">Yo tengo 15 años.</div>
+          <div class="breakdown">
+            <span class="word-chip" style="background:#DDE8FF; color:#1A3FA0;">I = sujeto</span>
+            <span class="word-chip" style="background:#D6F5F3; color:#0D7A70;">am = verbo</span>
+            <span class="word-chip" style="background:#F0F4FF; color:#6B7A99;">15 years old = edad</span>
+          </div>
+        </div>
+        <div class="ex-card coral">
+          <div class="en">She is a great athlete.</div>
+          <div class="es">Ella es una gran atleta.</div>
+          <div class="breakdown">
+            <span class="word-chip" style="background:#FFE8E8; color:#8B1A1A;">She = sujeto</span>
+            <span class="word-chip" style="background:#FFE8E8; color:#8B1A1A;">is = verbo</span>
+            <span class="word-chip" style="background:#F0F4FF; color:#6B7A99;">a great athlete = profesión</span>
+          </div>
+        </div>
+        <div class="ex-card mint">
+          <div class="en">We are from Mexico.</div>
+          <div class="es">Nosotros somos de México.</div>
+          <div class="breakdown">
+            <span class="word-chip" style="background:#D6F5F3; color:#0D7A70;">We = sujeto</span>
+            <span class="word-chip" style="background:#D6F5F3; color:#0D7A70;">are = verbo</span>
+            <span class="word-chip" style="background:#F0F4FF; color:#6B7A99;">from Mexico = origen</span>
+          </div>
+        </div>
+        <div class="ex-card purple">
+          <div class="en">It is very hot today.</div>
+          <div class="es">Hace mucho calor hoy.</div>
+          <div class="breakdown">
+            <span class="word-chip" style="background:#EFE0FF; color:#6A25A0;">It = sujeto</span>
+            <span class="word-chip" style="background:#EFE0FF; color:#6A25A0;">is = verbo</span>
+            <span class="word-chip" style="background:#F0F4FF; color:#6B7A99;">very hot = descripción</span>
+          </div>
+        </div>
+        <div class="ex-card">
+          <div class="en">They are my best friends.</div>
+          <div class="es">Ellos son mis mejores amigos.</div>
+          <div class="breakdown">
+            <span class="word-chip" style="background:#DDE8FF; color:#1A3FA0;">They = sujeto</span>
+            <span class="word-chip" style="background:#D6F5F3; color:#0D7A70;">are = verbo</span>
+            <span class="word-chip" style="background:#F0F4FF; color:#6B7A99;">my best friends</span>
+          </div>
+        </div>
+        <div class="ex-card coral">
+          <div class="en">He is a funny person.</div>
+          <div class="es">Él es una persona chistosa.</div>
+          <div class="breakdown">
+            <span class="word-chip" style="background:#FFE8E8; color:#8B1A1A;">He = sujeto</span>
+            <span class="word-chip" style="background:#FFE8E8; color:#8B1A1A;">is = verbo</span>
+            <span class="word-chip" style="background:#F0F4FF; color:#6B7A99;">funny = adjetivo</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Negative -->
+    <div class="example-panel" id="etab-neg">
+      <div class="example-cards">
+        <div class="ex-card coral">
+          <div class="en">I'm not tired today.</div>
+          <div class="es">No estoy cansado/a hoy.</div>
+          <div class="breakdown">
+            <span class="word-chip" style="background:#FFE8E8; color:#8B1A1A;">I'm not = neg.</span>
+            <span class="word-chip" style="background:#F0F4FF; color:#6B7A99;">tired = adjetivo</span>
+          </div>
+        </div>
+        <div class="ex-card">
+          <div class="en">He isn't my teacher.</div>
+          <div class="es">Él no es mi maestro.</div>
+          <div class="breakdown">
+            <span class="word-chip" style="background:#DDE8FF; color:#1A3FA0;">He = sujeto</span>
+            <span class="word-chip" style="background:#FFE8E8; color:#8B1A1A;">isn't = neg.</span>
+            <span class="word-chip" style="background:#F0F4FF; color:#6B7A99;">my teacher</span>
+          </div>
+        </div>
+        <div class="ex-card mint">
+          <div class="en">They aren't at school.</div>
+          <div class="es">Ellos no están en la escuela.</div>
+          <div class="breakdown">
+            <span class="word-chip" style="background:#D6F5F3; color:#0D7A70;">They = sujeto</span>
+            <span class="word-chip" style="background:#FFE8E8; color:#8B1A1A;">aren't = neg.</span>
+            <span class="word-chip" style="background:#F0F4FF; color:#6B7A99;">at school = lugar</span>
+          </div>
+        </div>
+        <div class="ex-card purple">
+          <div class="en">We aren't late. Don't worry!</div>
+          <div class="es">No llegamos tarde. ¡No te preocupes!</div>
+          <div class="breakdown">
+            <span class="word-chip" style="background:#EFE0FF; color:#6A25A0;">We aren't = neg.</span>
+            <span class="word-chip" style="background:#F0F4FF; color:#6B7A99;">late = adjetivo</span>
+          </div>
+        </div>
+        <div class="ex-card coral">
+          <div class="en">She isn't from Canada.</div>
+          <div class="es">Ella no es de Canadá.</div>
+          <div class="breakdown">
+            <span class="word-chip" style="background:#FFE8E8; color:#8B1A1A;">She isn't = neg.</span>
+            <span class="word-chip" style="background:#F0F4FF; color:#6B7A99;">from Canada = origen</span>
+          </div>
+        </div>
+        <div class="ex-card">
+          <div class="en">You aren't alone.</div>
+          <div class="es">No estás solo/a.</div>
+          <div class="breakdown">
+            <span class="word-chip" style="background:#DDE8FF; color:#1A3FA0;">You aren't = neg.</span>
+            <span class="word-chip" style="background:#F0F4FF; color:#6B7A99;">alone = adjetivo</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Questions -->
+    <div class="example-panel" id="etab-q">
+      <div class="example-cards">
+        <div class="ex-card">
+          <div class="en">Are you a new student?</div>
+          <div class="es">¿Eres un nuevo estudiante?</div>
+          <div class="breakdown">
+            <span class="word-chip" style="background:#D6F5F3; color:#0D7A70;">Are = to be</span>
+            <span class="word-chip" style="background:#DDE8FF; color:#1A3FA0;">you = pronombre</span>
+          </div>
+        </div>
+        <div class="ex-card mint">
+          <div class="en">Is he your brother?</div>
+          <div class="es">¿Es él tu hermano?</div>
+          <div class="breakdown">
+            <span class="word-chip" style="background:#D6F5F3; color:#0D7A70;">Is = to be</span>
+            <span class="word-chip" style="background:#FFE8E8; color:#8B1A1A;">he = pronombre</span>
+          </div>
+        </div>
+        <div class="ex-card coral">
+          <div class="en">Where are they from?</div>
+          <div class="es">¿De dónde son ellos?</div>
+          <div class="breakdown">
+            <span class="word-chip" style="background:#FFF3C4; color:#9B6F00;">Where = wh-</span>
+            <span class="word-chip" style="background:#D6F5F3; color:#0D7A70;">are = to be</span>
+          </div>
+        </div>
+        <div class="ex-card purple">
+          <div class="en">What is your favorite color?</div>
+          <div class="es">¿Cuál es tu color favorito?</div>
+          <div class="breakdown">
+            <span class="word-chip" style="background:#FFF3C4; color:#9B6F00;">What = wh-</span>
+            <span class="word-chip" style="background:#FFE8E8; color:#8B1A1A;">is = to be</span>
+          </div>
+        </div>
+        <div class="ex-card">
+          <div class="en">How old is she?</div>
+          <div class="es">¿Cuántos años tiene ella?</div>
+          <div class="breakdown">
+            <span class="word-chip" style="background:#FFF3C4; color:#9B6F00;">How old = wh-</span>
+            <span class="word-chip" style="background:#FFE8E8; color:#8B1A1A;">is = to be</span>
+          </div>
+        </div>
+        <div class="ex-card mint">
+          <div class="en">Am I on the right track?</div>
+          <div class="es">¿Voy por buen camino?</div>
+          <div class="breakdown">
+            <span class="word-chip" style="background:#D6F5F3; color:#0D7A70;">Am = to be</span>
+            <span class="word-chip" style="background:#DDE8FF; color:#1A3FA0;">I = pronombre</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dialogue -->
+    <div class="example-panel" id="etab-dia">
+      <div class="card-grid card-grid-2">
+        <div class="dialogue-box">
+          <div class="dialogue-header">🎒 Primer día de clases — First Day at School</div>
+          <div class="dialogue-body">
+            <div class="bubble a">
+              <span class="speaker">ALEX 👦</span>
+              Hi! Are you a new student?
+              <span class="es">¡Hola! ¿Eres un nuevo estudiante?</span>
+            </div>
+            <div class="bubble b">
+              <span class="speaker">SAM 👧</span>
+              Yes, I am. I'm Sam. I'm from Guadalajara.
+              <span class="es">Sí. Me llamo Sam. Soy de Guadalajara.</span>
+            </div>
+            <div class="bubble a">
+              <span class="speaker">ALEX 👦</span>
+              Nice to meet you! I'm Alex. Is this your first class?
+              <span class="es">¡Mucho gusto! Soy Alex. ¿Es esta tu primera clase?</span>
+            </div>
+            <div class="bubble b">
+              <span class="speaker">SAM 👧</span>
+              Yes, it is. I'm a little nervous. Are you in this class too?
+              <span class="es">Sí. Estoy un poco nerviosa. ¿Tú también estás en esta clase?</span>
+            </div>
+            <div class="bubble a">
+              <span class="speaker">ALEX 👦</span>
+              Yes! We are classmates now. Don't worry — the teacher is very nice!
+              <span class="es">¡Sí! Ahora somos compañeros. No te preocupes — el maestro es muy buena persona.</span>
+            </div>
+          </div>
+        </div>
+        <div class="dialogue-box">
+          <div class="dialogue-header">📱 Chat entre amigos — Friends Chat</div>
+          <div class="dialogue-body">
+            <div class="bubble a">
+              <span class="speaker">DIEGO 😎</span>
+              Hey! Where are you? We are at the park already!
+              <span class="es">¡Oye! ¿Dónde estás? Ya estamos en el parque.</span>
+            </div>
+            <div class="bubble b">
+              <span class="speaker">MARIA 😅</span>
+              I'm sorry! I'm at home. The bus isn't here yet.
+              <span class="es">Lo siento. Estoy en casa. El camión todavía no llega.</span>
+            </div>
+            <div class="bubble a">
+              <span class="speaker">DIEGO 😎</span>
+              Is your sister with you?
+              <span class="es">¿Tu hermana está contigo?</span>
+            </div>
+            <div class="bubble b">
+              <span class="speaker">MARIA 😅</span>
+              No, she isn't. She is at her friend's house. They aren't coming today.
+              <span class="es">No. Ella está en casa de su amiga. Ellas no vienen hoy.</span>
+            </div>
+            <div class="bubble a">
+              <span class="speaker">DIEGO 😎</span>
+              OK! We aren't in a hurry. See you soon!
+              <span class="es">¡Bien! No tenemos prisa. ¡Hasta pronto!</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== -->
+<!-- SECTION 5: PRACTICE     -->
+<!-- ======================== -->
+<section class="section section-practice" id="practice">
+  <div class="wrap">
+    <div class="section-header">
+      <span class="section-tag tag-yellow">Práctica</span>
+      <h2>Let's Practice! 🏆</h2>
+      <p>Ahora pon a prueba lo que aprendiste. Completa los ejercicios y verifica tus respuestas al final.</p>
+    </div>
+
+    <div class="practice-tabs">
+      <button class="ptab active" onclick="showPTab(this,'ptab-fill')">✏️ Fill in the Blank</button>
+      <button class="ptab" onclick="showPTab(this,'ptab-mc')">🔵 Multiple Choice</button>
+      <button class="ptab" onclick="showPTab(this,'ptab-match')">🔗 Matching</button>
+    </div>
+
+    <!-- Exercise 1: Fill in the Blank -->
+    <div class="practice-panel active" id="ptab-fill">
+      <div class="exercise-intro">
+        <h3>Complete the sentences</h3>
+        <p>Escribe <strong>am, is</strong> o <strong>are</strong> en el espacio. Luego presiona "Check Answers".</p>
+      </div>
+      <div class="fillblank-list" id="fb-form">
+        <div class="fb-item">
+          <div class="fb-num">1</div>
+          <span>I</span>
+          <input class="fb-input" data-ans="am" placeholder="??" maxlength="3" oninput="this.value=this.value.toLowerCase()">
+          <span>a student at this school.</span>
+        </div>
+        <div class="fb-item">
+          <div class="fb-num">2</div>
+          <span>She</span>
+          <input class="fb-input" data-ans="is" placeholder="??" maxlength="3" oninput="this.value=this.value.toLowerCase()">
+          <span>my best friend.</span>
+        </div>
+        <div class="fb-item">
+          <div class="fb-num">3</div>
+          <span>They</span>
+          <input class="fb-input" data-ans="are" placeholder="??" maxlength="3" oninput="this.value=this.value.toLowerCase()">
+          <span>very happy today.</span>
+        </div>
+        <div class="fb-item">
+          <div class="fb-num">4</div>
+          <span>The cat</span>
+          <input class="fb-input" data-ans="is" placeholder="??" maxlength="3" oninput="this.value=this.value.toLowerCase()">
+          <span>black and white.</span>
+        </div>
+        <div class="fb-item">
+          <div class="fb-num">5</div>
+          <span>We</span>
+          <input class="fb-input" data-ans="are" placeholder="??" maxlength="3" oninput="this.value=this.value.toLowerCase()">
+          <span>classmates and good friends.</span>
+        </div>
+        <div class="fb-item">
+          <div class="fb-num">6</div>
+          <span>He</span>
+          <input class="fb-input" data-ans="is" placeholder="??" maxlength="3" oninput="this.value=this.value.toLowerCase()">
+          <span>from the United States.</span>
+        </div>
+        <div class="fb-item">
+          <div class="fb-num">7</div>
+          <span>You</span>
+          <input class="fb-input" data-ans="are" placeholder="??" maxlength="3" oninput="this.value=this.value.toLowerCase()">
+          <span>a great English student!</span>
+        </div>
+        <div class="fb-item">
+          <div class="fb-num">8</div>
+          <span>It</span>
+          <input class="fb-input" data-ans="is" placeholder="??" maxlength="3" oninput="this.value=this.value.toLowerCase()">
+          <span>very cold outside right now.</span>
+        </div>
+      </div>
+      <button class="check-btn" onclick="checkFillBlank()">Check Answers ✔</button>
+      <div class="score-box" id="fb-score"></div>
+    </div>
+
+    <!-- Exercise 2: Multiple Choice -->
+    <div class="practice-panel" id="ptab-mc">
+      <div class="exercise-intro">
+        <h3>Choose the correct answer</h3>
+        <p>Selecciona la opción correcta para cada oración.</p>
+      </div>
+      <div class="mc-list" id="mc-form">
+        <div class="mc-item" data-ans="b">
+          <div class="mc-q">1. "Hello! _____ Maria. Nice to meet you."</div>
+          <div class="mc-options">
+            <button class="mc-opt" onclick="selectMC(this,0)">I am be</button>
+            <button class="mc-opt" onclick="selectMC(this,0)">I am</button>
+            <button class="mc-opt" onclick="selectMC(this,0)">I is</button>
+            <button class="mc-opt" onclick="selectMC(this,0)">Am I</button>
+          </div>
+          <div class="mc-feedback"></div>
+        </div>
+        <div class="mc-item" data-ans="c">
+          <div class="mc-q">2. "Carlos and Ana _____ from Zacatecas."</div>
+          <div class="mc-options">
+            <button class="mc-opt" onclick="selectMC(this,1)">is</button>
+            <button class="mc-opt" onclick="selectMC(this,1)">am</button>
+            <button class="mc-opt" onclick="selectMC(this,1)">are</button>
+            <button class="mc-opt" onclick="selectMC(this,1)">be</button>
+          </div>
+          <div class="mc-feedback"></div>
+        </div>
+        <div class="mc-item" data-ans="a">
+          <div class="mc-q">3. "The weather _____ perfect for a game today."</div>
+          <div class="mc-options">
+            <button class="mc-opt" onclick="selectMC(this,2)">is</button>
+            <button class="mc-opt" onclick="selectMC(this,2)">am</button>
+            <button class="mc-opt" onclick="selectMC(this,2)">are</button>
+            <button class="mc-opt" onclick="selectMC(this,2)">be</button>
+          </div>
+          <div class="mc-feedback"></div>
+        </div>
+        <div class="mc-item" data-ans="d">
+          <div class="mc-q">4. "_____ you in grade 10 this year?"</div>
+          <div class="mc-options">
+            <button class="mc-opt" onclick="selectMC(this,3)">Is</button>
+            <button class="mc-opt" onclick="selectMC(this,3)">Am</button>
+            <button class="mc-opt" onclick="selectMC(this,3)">Be</button>
+            <button class="mc-opt" onclick="selectMC(this,3)">Are</button>
+          </div>
+          <div class="mc-feedback"></div>
+        </div>
+        <div class="mc-item" data-ans="b">
+          <div class="mc-q">5. "My dog _____ very playful and energetic."</div>
+          <div class="mc-options">
+            <button class="mc-opt" onclick="selectMC(this,4)">are</button>
+            <button class="mc-opt" onclick="selectMC(this,4)">is</button>
+            <button class="mc-opt" onclick="selectMC(this,4)">am</button>
+            <button class="mc-opt" onclick="selectMC(this,4)">be</button>
+          </div>
+          <div class="mc-feedback"></div>
+        </div>
+      </div>
+      <button class="check-btn" onclick="checkMC()">Check Answers ✔</button>
+      <div class="score-box" id="mc-score"></div>
+    </div>
+
+    <!-- Exercise 3: Matching -->
+    <div class="practice-panel" id="ptab-match">
+      <div class="exercise-intro">
+        <h3>Match the pronoun to its Spanish meaning</h3>
+        <p>Conecta cada pronombre en inglés con su significado en español.</p>
+      </div>
+      <div class="match-wrap" id="match-form">
+        <div class="match-row">
+          <div class="match-left">I</div>
+          <div class="match-arrow">→</div>
+          <select class="match-select" data-ans="Yo">
+            <option value="">-- Selecciona --</option>
+            <option>Yo</option><option>Tú / Usted</option><option>Él</option><option>Ella</option>
+            <option>Eso / Esa</option><option>Nosotros/as</option><option>Ellos / Ellas</option>
+          </select>
+        </div>
+        <div class="match-row">
+          <div class="match-left">He</div>
+          <div class="match-arrow">→</div>
+          <select class="match-select" data-ans="Él">
+            <option value="">-- Selecciona --</option>
+            <option>Yo</option><option>Tú / Usted</option><option>Él</option><option>Ella</option>
+            <option>Eso / Esa</option><option>Nosotros/as</option><option>Ellos / Ellas</option>
+          </select>
+        </div>
+        <div class="match-row">
+          <div class="match-left">She</div>
+          <div class="match-arrow">→</div>
+          <select class="match-select" data-ans="Ella">
+            <option value="">-- Selecciona --</option>
+            <option>Yo</option><option>Tú / Usted</option><option>Él</option><option>Ella</option>
+            <option>Eso / Esa</option><option>Nosotros/as</option><option>Ellos / Ellas</option>
+          </select>
+        </div>
+        <div class="match-row">
+          <div class="match-left">We</div>
+          <div class="match-arrow">→</div>
+          <select class="match-select" data-ans="Nosotros/as">
+            <option value="">-- Selecciona --</option>
+            <option>Yo</option><option>Tú / Usted</option><option>Él</option><option>Ella</option>
+            <option>Eso / Esa</option><option>Nosotros/as</option><option>Ellos / Ellas</option>
+          </select>
+        </div>
+        <div class="match-row">
+          <div class="match-left">It</div>
+          <div class="match-arrow">→</div>
+          <select class="match-select" data-ans="Eso / Esa">
+            <option value="">-- Selecciona --</option>
+            <option>Yo</option><option>Tú / Usted</option><option>Él</option><option>Ella</option>
+            <option>Eso / Esa</option><option>Nosotros/as</option><option>Ellos / Ellas</option>
+          </select>
+        </div>
+        <div class="match-row">
+          <div class="match-left">They</div>
+          <div class="match-arrow">→</div>
+          <select class="match-select" data-ans="Ellos / Ellas">
+            <option value="">-- Selecciona --</option>
+            <option>Yo</option><option>Tú / Usted</option><option>Él</option><option>Ella</option>
+            <option>Eso / Esa</option><option>Nosotros/as</option><option>Ellos / Ellas</option>
+          </select>
+        </div>
+        <div class="match-row">
+          <div class="match-left">You</div>
+          <div class="match-arrow">→</div>
+          <select class="match-select" data-ans="Tú / Usted">
+            <option value="">-- Selecciona --</option>
+            <option>Yo</option><option>Tú / Usted</option><option>Él</option><option>Ella</option>
+            <option>Eso / Esa</option><option>Nosotros/as</option><option>Ellos / Ellas</option>
+          </select>
+        </div>
+      </div>
+      <button class="check-btn" onclick="checkMatch()">Check Answers ✔</button>
+      <div class="score-box" id="match-score"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>Diseñado para <strong>Primer Semestre de Bachillerato</strong> · English Basics</p>
+  <p style="margin-top:6px;">Para uso educativo · 2025 · Publicado con GitHub Pages 🚀</p>
+</footer>
+
+<script>
+  /* ---- NAV SCROLL HIGHLIGHT ---- */
+  const sections = document.querySelectorAll('section[id], header');
+  const navLinks = document.querySelectorAll('nav a');
+  window.addEventListener('scroll', () => {
+    let cur = '';
+    document.querySelectorAll('section[id]').forEach(s => {
+      if (window.scrollY >= s.offsetTop - 80) cur = s.id;
+    });
+    navLinks.forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + cur);
+    });
+  });
+
+  /* ---- EXAMPLE TABS ---- */
+  function showETab(btn, panelId) {
+    document.querySelectorAll('.etab').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.example-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(panelId).classList.add('active');
+  }
+
+  /* ---- PRACTICE TABS ---- */
+  function showPTab(btn, panelId) {
+    document.querySelectorAll('.ptab').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.practice-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(panelId).classList.add('active');
+  }
+
+  /* ---- EXERCISE 1: FILL IN THE BLANK ---- */
+  function checkFillBlank() {
+    const inputs = document.querySelectorAll('#fb-form .fb-input');
+    let correct = 0;
+    inputs.forEach(inp => {
+      const val = inp.value.trim().toLowerCase();
+      const ans = inp.dataset.ans;
+      inp.classList.remove('correct','wrong');
+      if (val === ans) { inp.classList.add('correct'); correct++; }
+      else { inp.classList.add('wrong'); inp.placeholder = ans; }
+    });
+    showScore('fb-score', correct, inputs.length);
+  }
+
+  /* ---- EXERCISE 2: MULTIPLE CHOICE ---- */
+  const mcCorrect = ['b','c','a','d','b'];
+  const mcOptLetters = ['a','b','c','d'];
+  const mcAnswered = [false,false,false,false,false];
+
+  function selectMC(btn, qIdx) {
+    if (mcAnswered[qIdx]) return;
+    const item = document.querySelectorAll('.mc-item')[qIdx];
+    const opts = item.querySelectorAll('.mc-opt');
+    const correctLetter = item.dataset.ans;
+    const chosen = mcOptLetters[Array.from(opts).indexOf(btn)];
+    opts.forEach(o => o.disabled = true);
+    if (chosen === correctLetter) {
+      btn.classList.add('correct');
+    } else {
+      btn.classList.add('wrong');
+      opts[mcOptLetters.indexOf(correctLetter)].classList.add('correct');
+    }
+    mcAnswered[qIdx] = (chosen === correctLetter);
+  }
+
+  function checkMC() {
+    const items = document.querySelectorAll('.mc-item');
+    let correct = 0;
+    items.forEach((item, i) => {
+      const opts = item.querySelectorAll('.mc-opt');
+      const correctLetter = item.dataset.ans;
+      const correctIdx = mcOptLetters.indexOf(correctLetter);
+      opts.forEach(o => o.disabled = true);
+      if (!opts[correctIdx].classList.contains('correct')) {
+        opts[correctIdx].classList.add('correct');
+      }
+      if (opts.some(o => o.classList.contains('correct') && !o.classList.contains('wrong'))) correct++;
+    });
+    showScore('mc-score', correct, items.length);
+  }
+
+  /* ---- EXERCISE 3: MATCHING ---- */
+  function checkMatch() {
+    const selects = document.querySelectorAll('#match-form .match-select');
+    let correct = 0;
+    selects.forEach(sel => {
+      sel.classList.remove('correct','wrong');
+      if (sel.value === sel.dataset.ans) { sel.classList.add('correct'); correct++; }
+      else { sel.classList.add('wrong'); }
+    });
+    showScore('match-score', correct, selects.length);
+  }
+
+  /* ---- SCORE DISPLAY ---- */
+  function showScore(id, correct, total) {
+    const box = document.getElementById(id);
+    const pct = Math.round((correct / total) * 100);
+    let emoji = '💪'; let msg = 'Keep practicing!'; let bg = '#FFE8E8'; let col = '#8B1A1A';
+    if (pct >= 80) { emoji = '🏆'; msg = 'Excellent work!'; bg = '#D6F5F3'; col = '#0D7A70'; }
+    else if (pct >= 60) { emoji = '👍'; msg = 'Good job! Review the mistakes.'; bg = '#FFF3C4'; col = '#7A5200'; }
+    box.style.display = 'block';
+    box.style.background = bg;
+    box.style.color = col;
+    box.innerHTML = `<h4>${emoji} ${correct} / ${total} correct — ${pct}%</h4><p>${msg}</p>`;
+    box.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+</script>
+</body>
+</html>
